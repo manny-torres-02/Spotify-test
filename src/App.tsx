@@ -30,6 +30,8 @@ function App() {
       </p>
       <div>
         <h1>Spotify</h1>
+        <section className="card music-selection"></section>
+        <button>pull top artists </button>
       </div>
     </>
   );
