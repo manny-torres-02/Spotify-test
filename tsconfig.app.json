@@ -23,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "authorization_flow.js"]
+  "include": ["src", "authorization_flow.ts"]
 }
