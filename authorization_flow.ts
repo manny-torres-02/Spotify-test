@@ -1,5 +1,9 @@
-require("dotenv").config();
-const clientId = process.env.SPOTIFY_CLIENT_ID;
+
+// const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+
+console.log(`API Key: ${clientId}`);
+
 if (!clientId) {
   throw new Error("Missing SPOTIFY_CLIENT_ID environment variable");
 }
