@@ -8,6 +8,9 @@ Maybe pull a "have you listened to them in a while"
 
 Take what I pull and push this to an AI recommneder
 
+# find a GPT/Gemeni/LLAMA 
+- this is the key piece where we should be able to embed the gpt, and ask for a reccomendation 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
