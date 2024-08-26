@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>Example</title>
-  <script src="./authorization_flow.ts" type="module"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Profile</title>
+  <link href="dist/styles.css" rel="stylesheet">
 </head>
+<body class="bg-spotify-black text-spotify-white">
+  <div class="container mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-8 text-spotify-green">Display your Spotify Profile Data</h1>
+    <section id="profile" class="bg-spotify-black shadow-md rounded-lg p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-spotify-green">Logged in as <span id="displayName" class="text-spotify-green"></span></h2>
+      <div class="flex items-center mb-4">
+        <img id="avatar" class="rounded-full border-2 border-spotify-green" width="100" src="#" alt="Profile Picture" />
+      </div>
+      <ul class="space-y-2">
+        <li class="flex items-center">
+          <span class="font-semibold text-spotify-gray">User ID:</span>
+          <span id="id" class="ml-2 text-spotify-white"></span>
+        </li>
+        <li class="flex items-center">
+          <span class="font-semibold text-spotify-gray">Email:</span>
+          <span id="email" class="ml-2 text-spotify-white"></span>
+        </li>
+        <li class="flex items-center">
+          <span class="font-semibold text-spotify-gray">Spotify URI:</span>
+          <a id="uri" class="ml-2 text-spotify-green hover:underline" href="#"></a>
+        </li>
+        <li class="flex items-center">
+          <span class="font-semibold text-spotify-gray">Link:</span>
+          <a id="url" class="ml-2 text-spotify-green hover:underline" href="#"></a>
+        </li>
+        <li class="flex items-center">
+          <span class="font-semibold text-spotify-gray">Profile Image:</span>
+          <span id="imgUrl" class="ml-2 text-spotify-white"></span>
+        </li>
+      </ul>
+    </section>
 
-<body>
-  <h1>Display your Spotify Profile Data</h1>
+    <button> Pull my top artists of the last couple of weeks 
+    </button>
+    <div id="top-artists"></div>
 
-  <section id="profile">
-    <h2>Logged in as <span id="displayName"></span></h2>
-    <img id="avatar" width="200" src="#" />
-    <ul>
-      <li>User ID: <span id="id"></span></li>
-      <li>Email: <span id="email"></span></li>
-      <li>Spotify URI: <a id="uri" href="#"></a></li>
-      <li>Link: <a id="url" href="#"></a></li>
-      <li>Profile Image: <span id="imgUrl"></span></li>
-    </ul>
-  </section>
-
+  </div>
 </body>
-
 </html>

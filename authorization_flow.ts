@@ -16,7 +16,11 @@ if (!code) {
 } else {
     const accessToken = await getAccessToken(clientId, code);
     const profile = await fetchProfile(accessToken);
-    populateUI(profile);
+  populateUI(profile);
+  
+  // Fetch the top artists 
+  const topArtists = await fetchTopArtists(accessToken);
+  populateTopArtists(topArtists);
 }
 
 export async function redirectToAuthCodeFlow(clientId: string) {
@@ -99,4 +103,15 @@ function populateUI(profile: any) {
   document.getElementById("url")!.setAttribute("href", profile.href);
   document.getElementById("imgUrl")!.innerText = profile.images[0]?.url ?? '(no profile image)';
   console.log(profile);
+}
+
+function populateTopArtistsUI(data:any) {
+  const topArtistsContainer = document.getElementById("topArtists")!;
+  topArtistsContainer.innerHTML = "";
+
+  data.items.forEach((artist: any) => {
+      const artistElement = document.createElement("div");
+      artistElement.innerText = artist.name;
+      topArtistsContainer.appendChild(artist);
+  });
 }
