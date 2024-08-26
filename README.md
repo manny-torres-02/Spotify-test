@@ -1,6 +1,10 @@
 # Goals
 
-This should pull my listening history
+[X]This should pull my listening history
+   [X] Pulls top 5 artists 
+   [X] Pulls top 10 songs 
+[ ] integrate the spotify API REcommender 
+[ ] integrate another api to compare the recommendations 
 
 I would love to pull my top artists, and get recommendations
 
